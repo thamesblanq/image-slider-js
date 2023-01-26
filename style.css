@@ -18,10 +18,15 @@ header {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     color: whitesmoke;
-    padding: 1em 45%;
     white-space: nowrap;
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+.img-slider {
+    display: inline-block;
+    text-align: center;
+    margin: 1em 45%;
 }
 
 .image-desc-holder {
@@ -30,18 +35,19 @@ header {
     background-color: rgba(0, 0, 0, 0.6);
     height: 30vh;
     width: 100%;
-    padding: 1em 0 0 2em;
+    padding: 1em 0 0 1.4em;
+    white-space: nowrap;
 }
 
 .image-desc {
     color: whitesmoke;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 0.2em;
 }
 
 .artist {
     color: whitesmoke;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     margin-bottom: 1em;
 }
@@ -62,3 +68,19 @@ header {
     color: whitesmoke;
 }
 
+@media screen and (max-width: 600px) {
+
+    .image-desc {
+        font-size: 1.5rem;
+    }
+    
+    .artist {
+        font-size: 1rem;
+    }
+
+    #btn {
+        padding: 0.25em 0,5em;
+        font-size: 1rem;
+    }
+    
+}

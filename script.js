@@ -8,7 +8,8 @@ const imageObject = [
     {image: "7.1.jpg", imagDesc: "Green Mountains", artist: "Sven"},
     {image: "8.1.jpg", imagDesc: "Japanese Street", artist: "Ava"},
     {image: "9.1.jpg", imagDesc: "Night Mountain view", artist: "Ella"},
-    {image: "10.1.jpg", imagDesc: "Snowy Mountain", artist: "Beau"}
+    {image: "10.1.jpg", imagDesc: "Snowy Mountain", artist: "Beau"},
+    {image: "background-image.jpg", imagDesc: "Crashing Waves", artist: "Eric De Vries"}
 ];
 
 let btn = document.getElementById('btn');

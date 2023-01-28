@@ -5,6 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
 header {
     position: relative;
     min-height: 100vh;
@@ -43,10 +47,18 @@ img {
     margin-bottom: 0.3em;
 }
 
-.image-holder .external-container #btn {
+.image-holder .external-container .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.image-holder .external-container .btn {
     padding: 0.5em 1em;
     font-size: 1.5rem;
     border: none;
+    margin-right: 0.7em;
     background-color: whitesmoke;
     color: black;
     font-weight: 700;
@@ -54,7 +66,7 @@ img {
     transition: all 0.5s;
 }
 
-.image-holder .external-container #btn:hover {
+.image-holder .external-container .btn:hover {
     background-color: black;
     color: whitesmoke;
 }

@@ -18,25 +18,27 @@ const imageObject = [
 let imageContainer = document.getElementsByTagName('img');// holds all the images in my html
 //console.log(imageContainer[3]);
 
-let btn = document.getElementById('btn');
+let btnOne = document.getElementById('btn-back');
+let btnTwo = document.getElementById('btn-next')
 let imageDescription = document.querySelector('.image-desc');
 let artiste = document.querySelector('.artist');
-let imageHolder = document.querySelector('.image-holder');//used to pick the first image in  my html
-let imageHolderChild = imageHolder.firstElementChild;
-
-//console.log(imageHolderChild);
+let imageHolder = document.querySelector('#picture');//used to pick the first image in  my html
 
 
+//console.log(imageContainer);
 
- btn.addEventListener ('click', function(){
+
+
+/*  btnOne.addEventListener ('click', function(){
 
     let random = Math.floor(Math.random() * imageObject.length);
-    let randomPicture = Math.floor(Math.random() * imageHolder.length);
-
+    let randomPicture = Math.floor(Math.random() * imageContainer.length);
+    imageHolder = imageContainer[randomPicture].classList.toggle('.active')
     //imageContainer[randomPicture].toggle('.active');
 
-    imageHolderChild = imageContainer[randomPicture];// not working
+    //imageHolder = imageContainer[randomPicture];// not working
     imageDescription.textContent = imageObject[random].imagDesc;
     artiste.textContent = imageObject[random].artist;
 })
 
+ */

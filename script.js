@@ -12,33 +12,78 @@ const imageObject = [
     {image: "10.1.jpg", imagDesc: "Snowy Mountain", artist: "Beau"}
 ];
 
+const imageArr = ["background-image.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.1.jpg", "6.1.jpg", "7.1.jpg", "8.1.jpg", "9.1.jpg", "10.1.jpg"
+];
+
+const descArr = ["Crashing Waves", "3D Rendering", "Ice Block", "Chinese Building", "Desert", "Mars", "Desert Clouds", "Green Mountains", "Japanese Street", "Night Mountain view", "Snowy Mountain"];
+
+const artistArr = ["Eric De Vries", "Leonardo", "Adam", "John", "Socrates", "James", "Brad", "Sven", "Ava", "Ella", "Beau"];
+
+let currentId = 0;
+
+
 
 //add a toggle method so that when it has a class of .active it will show and when it doesnt it wont show.
 
-let imageContainer = document.getElementsByTagName('img');// holds all the images in my html
-//console.log(imageContainer[3]);
 
 let btnOne = document.getElementById('btn-back');
 let btnTwo = document.getElementById('btn-next')
 let imageDescription = document.querySelector('.image-desc');
 let artiste = document.querySelector('.artist');
-let imageHolder = document.querySelector('#picture');//used to pick the first image in  my html
+let img = document.querySelector('.image-holder');
 
 
-//console.log(imageContainer);
+function updateImage()  {
+    let random =Math.floor(Math.random() * imageObject.length);
+    img.style.backgroundImage = `url(${imageArr[random]})`;
+    artiste.textContent = artistArr[random];
+    imageDescription.textContent = descArr[random];
+    
+};
+
+(setInterval (updateImage, 20000));
+
+
+function slide(currentId) {
+    img.style.backgroundImage = `url(${imageArr[currentId]})`;
+
+    img.classList.add('image-fade');
+
+    setTimeout( () => {
+        img.classList.remove('image-fade')
+    }, 550);
+
+    imageDescription.textContent = descArr[currentId];
+    artiste.textContent = artistArr[currentId]; 
+}
+
+btnOne.addEventListener('click', function() {
+    currentId--
+
+    if (currentId < 0) {
+        currentId = imageArr.length - 1;
+    };
+
+ slide(currentId);
+});
+
+btnTwo.addEventListener('click', function() {
+     currentId++
+ 
+    if (currentId > imageArr.length - 1) {
+        currentId = 0
+    };
+
+ slide(currentId);
+});
 
 
 
-/*  btnOne.addEventListener ('click', function(){
 
-    let random = Math.floor(Math.random() * imageObject.length);
-    let randomPicture = Math.floor(Math.random() * imageContainer.length);
-    imageHolder = imageContainer[randomPicture].classList.toggle('.active')
-    //imageContainer[randomPicture].toggle('.active');
 
-    //imageHolder = imageContainer[randomPicture];// not working
-    imageDescription.textContent = imageObject[random].imagDesc;
-    artiste.textContent = imageObject[random].artist;
-})
 
- */
+
+
+
+
+

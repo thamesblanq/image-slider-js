@@ -7,27 +7,22 @@
 
 body {
     scroll-behavior: smooth;
+    height: 100vh;
+    width: 100%;
 }
 
-header {
-    position: relative;
-    min-height: 100vh;
-}
-
-img {
-    display : block;
-}
 
 .image-holder {
     height: 100vh;
     width: 100%;
     color: whitesmoke;
     position: relative;
+    background-image: url(background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: ease-in;
 }
 
-.image-holder img {
-    display: block;
-}
 
 .image-holder .external-container {
     position: absolute;
@@ -71,10 +66,18 @@ img {
     color: whitesmoke;
 }
 
-.hidden {
-    display: none;
+.image-fade {
+    animation: imageFade 0.5s ease-in-out;
 }
 
-.active {
-    display: block;
+
+@keyframes imgFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
 }
